@@ -8,13 +8,13 @@ export default defineConfig({
     react(),
     splitVendorChunkPlugin(),
     VitePWA({
-      includeAssets: ["logo.svg", "meta-tags.png"],
+      includeAssets: ["**/*"],
       injectRegister: "auto",
       registerType: "autoUpdate",
       workbox: {
         clientsClaim: true,
         skipWaiting: true,
-        globPatterns: ["**/*.{svg,html,css,js,gif,png,txt}"],
+        globPatterns: ["**/*"],
         maximumFileSizeToCacheInBytes: 60000000,
       },
       manifest: {
