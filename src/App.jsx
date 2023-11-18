@@ -162,7 +162,10 @@ function App() {
           <div className=" font-extrabold text-xl py-1 w-full text-center text-slate-900 sds-text-shadow">Collége 2D+</div>
         </div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg'></div>
+      {
+        import.meta.env.VITE_NODE_ENV === "local" && <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg' />
+      }
+
     </>
   )
 }
