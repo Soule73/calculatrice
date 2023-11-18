@@ -29,8 +29,8 @@ const OutPut = ({ onOff, shift, value, isRadian, reult, valueRef }) => (
                             <span className={` ${shift ? " " : "hidden"} ml-10 mt-[1px] px-[1.7px] bg-black text-[#99a883]  absolute w-auto`}
                                 style={{ fontSize: "9px" }}>S</span>
                             <span className=" ml-20 mt-[1px] px-[1.7px] bg-black text-[#99a883] block absolute w-auto"
-                                readOnly style={{ fontSize: "9px" }}>{isRadian} </span>
-                            <input type="text" value={value} ref={valueRef} onChange={() => { }} placeholder="0"
+                                style={{ fontSize: "9px" }}>{isRadian} </span>
+                            <input readOnly type="text" value={value} ref={valueRef} onChange={() => { }} placeholder="0"
                                 className=" rounded-tl-md bg-inherit  rounded-tr-md px-1 text-black placeholder:text-black  mx-auto w-[94.99%] text-xl h-1/2  hover:outline-none focus:outline-none" />
                             <input type="text" value={reult} readOnly
                                 className="  rounded-bl-md bg-inherit  rounded-br-md px-1 text-black placeholder:text-black  hover:outline-none focus:outline-none text-right w-[95.99%] h-1/2 bottom-0 pt-2 text-2xl" />
