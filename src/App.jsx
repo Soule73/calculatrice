@@ -163,7 +163,7 @@ function App() {
         </div>
       </div>
       {
-        import.meta.env.VITE_NODE_ENV === "local" && <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg' />
+        import.meta.env.VITE_NODE_ENV === "local" ? <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg' /> : ""
       }
 
     </>
