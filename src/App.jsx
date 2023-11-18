@@ -116,15 +116,21 @@ function App() {
       if (res.includes("!")) {
         res = factorielle(eval(res.split("!")[0]))
       }
-      console.log(res)
       try {
 
         const e = eval(res);
 
         setResult(e)
       } catch (e) {
-        console.log((e.name === "SyntaxError"))
-        setResult("ERREUR Syntax")
+        if (e.name === "SyntaxError") {
+          setResult("ERREUR Syntax")
+        } else {
+          setResult(e.name)
+          if (import.meta.env.VITE_NODE_ENV === "local") {
+
+            console.error((e.name))
+          }
+        }
       }
     }
 
