@@ -10,13 +10,18 @@ il y a plus de fonctionnalités dans cette calculatrice à vous d'essyer.
 
 Installer les dependaces
 
-````npm i
+```npm i
+
+```
 
 Excuter en mode dev
 
 ```npm run dev
 
+```
+
 Compiler le build
 
 ```npm run build
-````
+
+```
