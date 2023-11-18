@@ -36,11 +36,11 @@ function App() {
     { val: "%", rep: "" },
     { val: "Abs(", rep: "Math.abs(" },
 
-    { val: "²", rep: "**2" },
-    { val: "√(", rep: "Math.sqrt(" },
 
-    { val: "³", rep: "**3" },
     { val: "³√(", rep: "Math.cbrt(" },
+    { val: "√(", rep: "Math.sqrt(" },
+    { val: "²", rep: "**2" },
+    { val: "³", rep: "**3" },
 
     { val: "^", rep: "**" },
     { val: "^√(", rep: "Math.cbrt(" },
@@ -116,7 +116,9 @@ function App() {
       if (res.includes("!")) {
         res = factorielle(eval(res.split("!")[0]))
       }
+      console.log(res)
       try {
+
         const e = eval(res);
 
         setResult(e)
