@@ -6,7 +6,7 @@
 
 Un projet de <strong>Calculatrice Scientifique </strong>réaliser avec avec <strong>le framwork Tailwind css et react</strong>
 
-il y a plus de fonctionnalités dans cette calculatrice à vous d'essyer.
+il y a plus de fonctionnalités dans cette calculatrice à vous d'essayer.
 
 Installer les dependaces
 
