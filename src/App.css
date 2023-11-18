@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sds-btn-bg-slate-700 {
+  @apply bg-slate-700 text-white text-xl rounded-t-lg rounded-b-xl text-center font-bold
+}
+
+.sds-btn-bg-red-800 {
+  @apply rounded-t-lg rounded-b-xl font-bold bg-red-800 text-white text-center w-full h-full text-sm py-2
+}
+
+.sds-btn-bg-green-900 {
+  @apply font-bold text-xl rounded-t-lg rounded-b-xl bg-green-900 text-white text-center w-full h-full py-1;
+
+}
+
+.neoDiv {
+
+  box-shadow: 4px 4px 5px #080f1b69,
+    -8px -8px 15px #080f1b4a,
+    inset -5px 4px 10px 2px #08142994,
+    inset 6px -5px 12px 0px #08142994;
+}
+
+.btn,
+.sds-rounded_center {
+  outline: none;
+  box-shadow:
+    4px 4px 8px #00000039,
+    inset -4px -4px 8px #00000039,
+    inset -4px -4px 8px #00000039,
+
+    inset 1px 4px 8px #0d27502f;
+}
+
+
+.resul {
+  box-shadow:
+    1px 1px 5px #02010197,
+    -1px -1px 5px #020101,
+    1px 1px 5px #02010190;
+}
+
+.resulDiv {
+  box-shadow:
+    4px 4px 8px #00000036,
+    -4px -4px 8px #00000052,
+    inset 4px 4px 8px #1018052f;
+}
+
+button:focus {
+  cursor: pointer;
+  outline: none !important;
+  border: none !important;
+
+}
+
+button:active {
+  box-shadow:
+    -3px -3px 7px #a0a0a032,
+    3px 3px 5px rgba(94, 104, 121, 0.417);
+  border: none;
+  outline: none;
+}
+
+
+button:hover {
+  color: #696a6a;
+}
+
+.sds-text-shadow {
+  text-shadow: 1px 1px 1px #010e03a3;
+}
+
+.sds-text-shadow-inset {
+  font-weight: 800;
+  text-shadow: 1px 1px 0 #000400b2;
+}
