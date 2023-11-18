@@ -1,4 +1,4 @@
-<img src='./public/logo512.png'>
+<img style="margin:0 auto" src='./public/logo512.png'>
 
 ##Description
 
