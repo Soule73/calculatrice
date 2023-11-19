@@ -57,9 +57,9 @@ export default defineConfig({
         id: "/",
         start_url: "/",
         display: "standalone",
-        theme_color: "#ffffff",
+        theme_color: "#22c55e",
         description: "SDS Calculatrice : Réseaux Chat de SDS ",
-        background_color: "#ffffff",
+        background_color: "#22c55e",
         scope: "/",
         display_override: ["window-controls-overlay"],
         shortcuts: [
