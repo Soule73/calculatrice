@@ -144,4 +144,5 @@ const handleDelete = async (value, arrayVal) => {
   }
   return val.substring(0, val.length - 1);
 };
+
 export { pgcdOrPpcm, MathD, handleDelete, replaceVal, factorielle };

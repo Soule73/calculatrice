@@ -20,9 +20,36 @@ function App() {
   const [onOff, setOnOff] = useState(false)
   const [isRadian, setIsRadian] = useState("R")
 
+  const [cacheValue, setCacheValue] = useState([])
+  const [inctremente, setInctremente] = useState(1);
+
+  const previewVal = async () => {
+    if (cacheValue.length > 0) {
+      const v = cacheValue.length > inctremente
+      v && setInctremente(prev => prev + 1)
+      const x = cacheValue.length - inctremente
+
+      setValue(cacheValue[x])
+
+    }
+  }
+
+  const nextVal = async () => {
+
+    if (cacheValue.length > 0) {
+      inctremente > 0 && setInctremente(prev => prev - 1)
+      const x = cacheValue.length - inctremente
+      setValue(cacheValue[x])
+
+
+    }
+  }
   const handleChangeRadian = () => setIsRadian(isRadian === "R" ? "D" : "R")
 
   const handleValue = async (val, shiftVal) => {
+
+
+
     if (onOff) {
       const value = shift ? shiftVal : val
       setValue((prev => prev + value))
@@ -121,6 +148,7 @@ function App() {
         const e = eval(res);
 
         setResult(e)
+        setCacheValue(prev => [...prev, value])
       } catch (e) {
         if (e.name === "SyntaxError") {
           setResult("ERREUR Syntax")
@@ -142,6 +170,8 @@ function App() {
     }
   }
 
+
+
   const del = async () => setValue(await handleDelete(value, arrayVal))
 
   const valueRef = useRef();
@@ -154,7 +184,10 @@ function App() {
           setOnOff={setOnOff}
           setShift={setShift}
           handleChangeRadian={handleChangeRadian}
-          handleValue={handleValue} />
+          handleValue={handleValue}
+          previewVal={previewVal}
+          nextVal={nextVal}
+        />
         <div className=" h-max px-3 ">
           <BorderSlate />
           <BorderSlate right />
@@ -170,9 +203,9 @@ function App() {
           <div className=" font-extrabold text-xl py-1 w-full text-center text-slate-900 sds-text-shadow">Collége 2D+</div>
         </div>
       </div>
-      {
+      {/* {
         import.meta.env.VITE_NODE_ENV === "local" ? <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg' /> : ""
-      }
+      } */}
 
     </>
   )

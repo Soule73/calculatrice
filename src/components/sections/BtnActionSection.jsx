@@ -3,7 +3,7 @@ import BtnEmpyGreen from "../BtnEmpyGreen";
 import BtnRound from "../BtnRound";
 import BtnSlate from "../BtnSlate";
 
-const BtnActionSection = ({ setShift, setOnOff = () => { }, handleChangeRadian = () => { }, handleValue = () => { } }) => (
+const BtnActionSection = ({ nextVal = () => { }, previewVal = () => { }, setShift, setOnOff = () => { }, handleChangeRadian = () => { }, handleValue = () => { } }) => (
     <div className=" mb-1 grid grid-cols-3 h-max px-1 w-full mx-auto">
 
         <div className=" grid grid-rows-2 ">
@@ -36,7 +36,7 @@ const BtnActionSection = ({ setShift, setOnOff = () => { }, handleChangeRadian =
 
         </div>
 
-        <BtnRound />
+        <BtnRound previewVal={previewVal} nextVal={nextVal} />
 
         <div className=" grid grid-rows-2 ">
 
