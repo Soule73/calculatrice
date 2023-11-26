@@ -177,37 +177,34 @@ function App() {
   const valueRef = useRef();
 
   return (
-    <>
-      <div className="neoDiv  select-none border-b-8 border-t border-x-4 border-slate-900 rounded-t-xl rounded-b-[45px] min-h-max relative overflow-hidden max-w-[350px]">
-        <OutPut onOff={onOff} shift={shift} value={value} isRadian={isRadian} valueRef={valueRef} reult={reult} />
-        <BtnActionSection
+    <div className="neoDiv  select-none border-b-8 border-t border-x-4 border-slate-900 rounded-t-xl rounded-b-[45px] min-h-max relative overflow-hidden max-w-[350px]">
+      <OutPut onOff={onOff} shift={shift} value={value} isRadian={isRadian} valueRef={valueRef} reult={reult} />
+      <BtnActionSection
+        setOnOff={setOnOff}
+        setShift={setShift}
+        handleChangeRadian={handleChangeRadian}
+        handleValue={handleValue}
+        previewVal={previewVal}
+        nextVal={nextVal}
+      />
+      <div className=" h-max px-3 ">
+        <BorderSlate />
+        <BorderSlate right />
+        <BtnSlateSection
+          handleValue={handleValue} />
+        <BtnGreenSection
+          handleDelete={del}
+          shift={shift}
           setOnOff={setOnOff}
-          setShift={setShift}
-          handleChangeRadian={handleChangeRadian}
+          handleResult={handleResult}
           handleValue={handleValue}
-          previewVal={previewVal}
-          nextVal={nextVal}
-        />
-        <div className=" h-max px-3 ">
-          <BorderSlate />
-          <BorderSlate right />
-          <BtnSlateSection
-            handleValue={handleValue} />
-          <BtnGreenSection
-            handleDelete={del}
-            shift={shift}
-            setOnOff={setOnOff}
-            handleResult={handleResult}
-            handleValue={handleValue}
-            clearVal={clearVal} />
-          <div className=" font-extrabold text-xl py-1 w-full text-center text-slate-900 sds-text-shadow">Collége 2D+</div>
-        </div>
+          clearVal={clearVal} />
+        <div className=" font-extrabold text-xl py-1 w-full text-center text-slate-900 sds-text-shadow">Collége 2D+</div>
       </div>
       {/* {
-        import.meta.env.VITE_NODE_ENV === "local" ? <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg' /> : ""
-      } */}
-
-    </>
+          import.meta.env.VITE_NODE_ENV === "local" ? <div dangerouslySetInnerHTML={{ __html: value }} className=' text-lg' /> : ""
+        } */}
+    </div>
   )
 }
 
